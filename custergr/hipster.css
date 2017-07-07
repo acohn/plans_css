@@ -63,7 +63,7 @@ table {
 	margin-top: 85px;
 	position: fixed;
 	border: 6px solid #000;
-	background-image: url(http://grantcuster.com/plans/white.png);
+	background-image: url(white.png);
 	-moz-box-shadow: 0 5px 10px 1px #000000;
 	-moz-border-radius: 20px;
 	-webkit-box-shadow: 0 5px 10px 1px #000000;
@@ -114,7 +114,7 @@ table {
 	border: solid 6px #000000;
 	margin-left: -26px;
 	width: 160px;
-	background-image: url(http://grantcuster.com/plans/white.png);
+	background-image: url(white.png);
 	-moz-box-shadow: 0 5px 10px 1px #000000;
 	-moz-border-radius: 20px;
 	-webkit-box-shadow: 0 5px 10px 1px #000000;
@@ -134,7 +134,7 @@ table {
 	width: 100%;
 }
 #autoread a:hover {
-	background-image: url(http://grantcuster.com/plans/READ.png);
+	background-image: url(READ.png);
 	background-position: 100px 5px;
 	background-repeat: no-repeat;
 }
@@ -216,7 +216,7 @@ a:hover {
 	line-height: 0.6em;
 }
 .plan_text {
-	background-image: url(http://grantcuster.com/plans/white.png);
+	background-image: url(white.png);
 	background-repeat: repeat;
 	padding: 2em;
 	border: solid 6px;
@@ -243,7 +243,7 @@ a:hover {
 	margin-right: 20px;
 	-moz-box-shadow: 0 8px 10px 1px #000000;
 	-webkit-box-shadow: 0 8px 10px 1px #000000;
-	background-image: url(http://grantcuster.com/plans/white.png);
+	background-image: url(white.png);
 	margin-bottom: 40px;
 }
 #readadd_levels {
@@ -284,7 +284,7 @@ a:hover {
 	line-height: 1.4em;
 	margin-top: 17px;
 	font-family: Helvetica, Arial, Sans-serif;
-	background-image: url(http://grantcuster.com/plans/white.png);
+	background-image: url(white.png);
 }
 #editform .submitinput {
 	float: right;
@@ -302,7 +302,7 @@ a:hover {
 	margin-right: 90px;
 	-moz-box-shadow: 0 8px 10px 1px #000000;
 	-webkit-box-shadow: 0 8px 10px 1px #000000;
-	background-image: url(http://grantcuster.com/plans/white.png);
+	background-image: url(white.png);
 	text-transform: uppercase;
 	font-weight: bold;
 	cursor: pointer;
@@ -312,7 +312,7 @@ a:hover {
 }
 /* Secrets */
 #secrets {
-	background-image: url(http://grantcuster.com/plans/white.png);
+	background-image: url(white.png);
 	background-repeat: repeat;
 	padding: 2em;
 	border: solid 6px;
@@ -339,7 +339,7 @@ a#post_secret_toggle {
 	padding-left: 10px;
 	padding-right:10px;
 	margin-left: 15px;
-	background-image: url(http://grantcuster.com/plans/white.png);
+	background-image: url(white.png);
 	text-transform: uppercase;
 	font-weight: bold;
 	cursor: pointer;
@@ -377,7 +377,7 @@ a#post_secret_toggle:hover {
 	margin-left: 360px;
 	-moz-box-shadow: 0 8px 10px 1px #000000;
 	-webkit-box-shadow: 0 8px 10px 1px #000000;
-	background-image: url(http://grantcuster.com/plans/white.png);
+	background-image: url(white.png);
 	text-transform: uppercase;
 	font-weight: bold;
 	cursor: pointer;
@@ -400,7 +400,7 @@ a#older_secrets {
 	padding-left: 10px;
 	padding-right:10px;
 	margin-right: 20px;
-	background-image: url(http://grantcuster.com/plans/white.png);
+	background-image: url(white.png);
 	text-transform: uppercase;
 	font-weight: bold;
 	cursor: pointer;
@@ -449,7 +449,7 @@ a#older_secrets:hover {
 	letter-spacing: -1px;
 	border: solid 6px #000000;
 	width: 160px;
-	background-image: url(http://grantcuster.com/plans/white.png);
+	background-image: url(white.png);
 	-moz-box-shadow: 0 5px 10px 1px #000000;
 	-moz-border-radius: 20px;
 	-webkit-box-shadow: 0 5px 10px 1px #000000;
@@ -460,7 +460,7 @@ a#older_secrets:hover {
 	margin-bottom: 5px;
 }
 #search_results {
-	background-image: url(http://grantcuster.com/plans/white.png);
+	background-image: url(white.png);
 	background-repeat: repeat;
 	padding: 2em;
 	border: solid 6px;
@@ -558,14 +558,14 @@ a#older_secrets:hover {
 	margin-right: 20px;
 	-moz-box-shadow: 0 8px 10px 1px #000000;
 	-webkit-box-shadow: 0 8px 10px 1px #000000;
-	background-image: url(http://grantcuster.com/plans/white.png);
+	background-image: url(white.png);
 	text-transform: uppercase;
 	font-weight: bold;
 	line-height: 1em;
 	font-size: 0.8em;
 }
 #preflist {
-	background-image: url(http://grantcuster.com/plans/white.png);
+	background-image: url(white.png);
 	background-repeat: repeat;
 	padding: 2em;
 	border: solid 6px;
@@ -607,4 +607,4 @@ hr {
 	margin-top: 7px;
 	height: 5px;
 	border-bottom: 10px solid #ddd;
-}	
+}
