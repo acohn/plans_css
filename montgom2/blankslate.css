@@ -6,7 +6,7 @@
  * You can find more details at <http://creativecommons.org/licenses/by-sa/3.0/us/>
  */
 
-/*@import url('http://www.grinnellplans.com/styles/starter_defaults.css');
+/*@import url('https://www.grinnellplans.com/styles/starter_defaults.css');
 
 /* Base font and color settings */
 body {
@@ -352,13 +352,13 @@ body.plan #main {
 
 /* Styling for the fill meter when editing */
 #edit_fill_meter .fill_bar {
-	background: url("http://www.grinnellplans.com/images/old/unfilled.gif");
+	background: url("https://www.grinnellplans.com/images/old/unfilled.gif");
 	float: left;
 	width: 100px;
 	height: 16px;
 }
 #edit_fill_meter .full_amount {
-	background: url("http://www.grinnellplans.com/images/old/filled.gif");
+	background: url("https://www.grinnellplans.com/images/old/filled.gif");
 	height: 1em;
 	/* Default to no width if javascript is turned off */
 	width: 0%;
@@ -367,7 +367,7 @@ body.plan #main {
 	float: left;
 }
 #edit_fill_meter.danger .full_amount {
-	background: url("http://www.grinnellplans.com/images/old/danger.gif");
+	background: url("https://www.grinnellplans.com/images/old/danger.gif");
 }
 
 /* Some styling with small icons for various messages */
@@ -381,7 +381,7 @@ body.plan #main {
 	font-weight: bold;
 	padding-left: 20px;
 	padding-bottom: 0.3em;
-	background: url("http://www.grinnellplans.com/images/icons/famfamfam/exclamation.png") no-repeat left center;
+	background: url("https://www.grinnellplans.com/images/icons/famfamfam/exclamation.png") no-repeat left center;
 }
 .infomessage .body, .requestmessage .body {
 	padding-left: 20px;
@@ -390,17 +390,17 @@ body.plan #main {
 	display: none;
 }
 .infomessage .body {
-	background: url("http://www.grinnellplans.com/images/icons/famfamfam/information.png") no-repeat left center;
+	background: url("https://www.grinnellplans.com/images/icons/famfamfam/information.png") no-repeat left center;
 }
 .requestmessage .body {
-	background: url("http://www.grinnellplans.com/images/icons/famfamfam/help.png") no-repeat left center;
+	background: url("https://www.grinnellplans.com/images/icons/famfamfam/help.png") no-repeat left center;
 }
 /* IE screws up the background image positioning when we span more than one line, so hack IE7... */
 *:first-child+html .infomessage .body {
-	background: url("http://www.grinnellplans.com/images/icons/famfamfam/information.png") no-repeat left 8px;
+	background: url("https://www.grinnellplans.com/images/icons/famfamfam/information.png") no-repeat left 8px;
 }
 *:first-child+html .requestmessage .body {
-	background: url("http://www.grinnellplans.com/images/icons/famfamfam/help.png") no-repeat left 8px;
+	background: url("https://www.grinnellplans.com/images/icons/famfamfam/help.png") no-repeat left 8px;
 }
 /* ...and just hide them altogether for IE6 */
 * html .infomessage .body, * html .requestmessage .body, * html .alertmessage .title {
