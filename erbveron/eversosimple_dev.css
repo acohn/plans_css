@@ -57,17 +57,17 @@ strong, bold {
 
 /* ----------- "Starter Default" from Plans Admins" ---------- */
 
-@import url('http://www.grinnellplans.com/styles/starter_defaults.css');
+@import url('https://www.grinnellplans.com/styles/starter_defaults.css');
 
 /* Styling for the fill meter when editing */
 #edit_fill_meter .fill_bar {
-	background: url("http://www.grinnellplans.com/images/old/unfilled.gif");
+	background: url("https://www.grinnellplans.com/images/old/unfilled.gif");
 	float: left;
 	width: 100px;
 	height: 16px;
 }
 #edit_fill_meter .full_amount {
-	background: url("http://www.grinnellplans.com/images/old/filled.gif");
+	background: url("https://www.grinnellplans.com/images/old/filled.gif");
 	height: 1em;
 	/* Default to no width if javascript is turned off */
 	width: 0%;
@@ -76,7 +76,7 @@ strong, bold {
 	float: left;
 }
 #edit_fill_meter.danger .full_amount {
-	background: url("http://www.grinnellplans.com/images/old/danger.gif");
+	background: url("https://www.grinnellplans.com/images/old/danger.gif");
 }
 
 
