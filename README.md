@@ -1,3 +1,5 @@
+# GrinnellPlans CSS 
+
 This repo contains HTTPS-enabled versions of custom stylesheets for
 [GrinnellPlans](https://www.grinnellplans.com/), a social networking site for
 alumni of Grinnell College. 
