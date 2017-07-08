@@ -1,0 +1,432 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 8, ../sass/screen.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 10, ../sass/screen.scss */
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* line 17, ../sass/screen.scss */
+#wrapper #main {
+  max-width: 680px;
+  padding: 0 30px;
+  margin: 25px auto;
+}
+/* line 21, ../sass/screen.scss */
+#wrapper #main h1 {
+  font-size: 1.4em;
+  font-weight: bold;
+  line-height: 1.6em;
+}
+/* line 26, ../sass/screen.scss */
+#wrapper #main h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.6em;
+}
+/* line 31, ../sass/screen.scss */
+#wrapper #main #edit_textarea {
+  width: 100%;
+  font-size: 16px;
+  line-height: 26px;
+  overflow: auto;
+  padding: 10px;
+}
+/* line 38, ../sass/screen.scss */
+#wrapper #main #edit_fill_meter {
+  float: left;
+  margin-top: 2px;
+  color: #999;
+}
+/* line 43, ../sass/screen.scss */
+#wrapper #main .submitinput {
+  background: #d4efff;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  line-height: 28px;
+  color: #000;
+  float: right;
+  cursor: pointer;
+}
+/* line 54, ../sass/screen.scss */
+#wrapper #main .submitinput:hover {
+  background: #8fd6ff;
+}
+/* line 58, ../sass/screen.scss */
+#wrapper #main form > div {
+  overflow: hidden;
+}
+/* line 61, ../sass/screen.scss */
+#wrapper #main #readadd_levels {
+  float: left;
+}
+/* line 63, ../sass/screen.scss */
+#wrapper #main #readadd_levels .form_prompt {
+  float: left;
+  margin-right: 10px;
+}
+/* line 68, ../sass/screen.scss */
+#wrapper #main #header {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: solid 1px #ccc;
+}
+/* line 72, ../sass/screen.scss */
+#wrapper #main #header .username {
+  font-size: 2.1em;
+  font-weight: bold;
+  line-height: 1.3em;
+}
+/* line 77, ../sass/screen.scss */
+#wrapper #main #header .lastupdated, #wrapper #main #header .lastlogin {
+  display: none;
+}
+/* line 80, ../sass/screen.scss */
+#wrapper #main #header .title {
+  display: none;
+}
+/* line 83, ../sass/screen.scss */
+#wrapper #main #header .planname {
+  color: #888;
+  font-size: 0.89m;
+}
+/* line 88, ../sass/screen.scss */
+#wrapper #main .plan_text {
+  color: #222;
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+/* line 95, ../sass/screen.scss */
+#wrapper #main hr {
+  border: none;
+  border-bottom: dotted 1px #aaa;
+  margin: 25px 0;
+}
+/* line 100, ../sass/screen.scss */
+#wrapper #main b {
+  font-weight: bold;
+}
+/* line 103, ../sass/screen.scss */
+#wrapper #main i {
+  font-style: italic;
+}
+/* line 106, ../sass/screen.scss */
+#wrapper #main a {
+  text-decoration: none;
+  color: #222;
+  background: #d4efff;
+}
+/* line 110, ../sass/screen.scss */
+#wrapper #main a:hover {
+  background: #8fd6ff;
+  color: #000;
+}
+/* line 114, ../sass/screen.scss */
+#wrapper #main a.planlove {
+  background: #fffbbf;
+}
+/* line 116, ../sass/screen.scss */
+#wrapper #main a.planlove:hover {
+  background: #fff667;
+}
+/* line 121, ../sass/screen.scss */
+#wrapper #main .infomessage {
+  font-size: 0.9em;
+  line-height: 1.5em;
+  color: magenta;
+}
+/* line 125, ../sass/screen.scss */
+#wrapper #main .infomessage .title {
+  font-weight: bold;
+  color: #111;
+  display: none;
+}
+/* line 132, ../sass/screen.scss */
+#wrapper #main #secrets .secret {
+  margin-bottom: 1.6em;
+  padding-bottom: 1.6em;
+  border-bottom: solid 1px #ccc;
+}
+/* line 136, ../sass/screen.scss */
+#wrapper #main #secrets .secret span {
+  color: #777;
+}
+/* line 139, ../sass/screen.scss */
+#wrapper #main #secrets .secret .date_posted {
+  font-weight: bold;
+  color: #000;
+}
+
+/* line 147, ../sass/screen.scss */
+#nav {
+  width: 200px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  max-height: 100%;
+  overflow: auto;
+  padding: 20px 25px;
+  font-size: 16px;
+  line-height: 26px;
+}
+/* line 157, ../sass/screen.scss */
+#nav h2, #nav .autoreadname, #nav .submitinput {
+  display: none;
+}
+/* line 160, ../sass/screen.scss */
+#nav #logo {
+  display: none;
+}
+/* line 164, ../sass/screen.scss */
+#nav #finger input {
+  width: 151px;
+  font-size: 16px;
+  line-height: 26px;
+  background: #efefef;
+  font-family: "Helvetica Neue", sans-serif;
+  border: none;
+}
+/* line 171, ../sass/screen.scss */
+#nav #finger input:active, #nav #finger input:focus {
+  background: #fff667;
+  outline: none;
+}
+/* line 177, ../sass/screen.scss */
+#nav ul {
+  margin-top: 15px;
+}
+/* line 179, ../sass/screen.scss */
+#nav ul li > ul {
+  margin: 0;
+  border: none;
+}
+/* line 184, ../sass/screen.scss */
+#nav a {
+  text-transform: lowercase;
+  color: #999;
+  text-decoration: none;
+  padding: 2px 0;
+  display: block;
+}
+/* line 190, ../sass/screen.scss */
+#nav a:hover {
+  background: #fffbbf;
+  color: #000;
+}
+/* line 197, ../sass/screen.scss */
+#nav .linkslist a:hover {
+  background: #d4efff;
+}
+/* line 203, ../sass/screen.scss */
+#nav #finger input {
+  background: #fffbbf;
+}
+/* line 205, ../sass/screen.scss */
+#nav #finger input:hover, #nav #finger input:active, #nav #finger input:focus {
+  background: #fff667;
+  outline: none;
+}
+/* line 211, ../sass/screen.scss */
+#nav a {
+  color: #222;
+}
+
+/* line 215, ../sass/screen.scss */
+#footer {
+  display: none;
+}
+
+@media screen and (max-width: 1130px) {
+  /* line 220, ../sass/screen.scss */
+  #wrapper #main {
+    max-width: 680px;
+    padding: 0 20px;
+    margin: 25px 0 25px 180px;
+  }
+}
+@media screen and (max-width: 740px) {
+  /* line 229, ../sass/screen.scss */
+  #wrapper #nav {
+    position: relative;
+    max-width: 740px;
+    width: auto;
+    padding-bottom: 25px;
+    border-bottom: solid 1px #ccc;
+  }
+  /* line 235, ../sass/screen.scss */
+  #wrapper #nav li {
+    display: inline;
+  }
+  /* line 239, ../sass/screen.scss */
+  #wrapper #nav #finger input {
+    background: #fffbbf;
+  }
+  /* line 241, ../sass/screen.scss */
+  #wrapper #nav #finger input:hover, #wrapper #nav #finger input:active, #wrapper #nav #finger input:focus {
+    background: #fff667;
+    outline: none;
+  }
+  /* line 247, ../sass/screen.scss */
+  #wrapper #nav a {
+    text-transform: lowercase;
+    color: #222;
+    text-decoration: none;
+    display: inline;
+    float: none;
+    padding: 0;
+    margin-right: 6px;
+    background: #d4efff;
+  }
+  /* line 256, ../sass/screen.scss */
+  #wrapper #nav a:hover {
+    background: #8fd6ff;
+    color: #000;
+  }
+  /* line 262, ../sass/screen.scss */
+  #wrapper #nav #autoread a {
+    background: #fffbbf;
+  }
+  /* line 264, ../sass/screen.scss */
+  #wrapper #nav #autoread a:hover {
+    background: #fff667;
+  }
+  /* line 270, ../sass/screen.scss */
+  #wrapper #main {
+    max-width: 740px;
+    padding: 0 25px;
+    margin: 25px 0 25px;
+  }
+}
+@media screen and (max-device-width: 480px) {
+  /* line 279, ../sass/screen.scss */
+  #wrapper #nav {
+    position: relative;
+    max-width: 600px;
+    width: auto;
+    padding: 25px 40px;
+    border-bottom: solid 1px #ccc;
+  }
+  /* line 285, ../sass/screen.scss */
+  #wrapper #nav li {
+    display: inline;
+  }
+  /* line 289, ../sass/screen.scss */
+  #wrapper #nav #finger input {
+    background: #fffbbf;
+  }
+  /* line 291, ../sass/screen.scss */
+  #wrapper #nav #finger input:hover, #wrapper #nav #finger input:active, #wrapper #nav #finger input:focus {
+    background: #fff667;
+    outline: none;
+  }
+  /* line 297, ../sass/screen.scss */
+  #wrapper #nav a {
+    text-transform: lowercase;
+    color: #222;
+    text-decoration: none;
+    display: inline;
+    float: none;
+    padding: 0;
+    margin-right: 6px;
+    background: #d4efff;
+  }
+  /* line 306, ../sass/screen.scss */
+  #wrapper #nav a:hover {
+    background: #8fd6ff;
+    color: #000;
+  }
+  /* line 312, ../sass/screen.scss */
+  #wrapper #nav #autoread a {
+    background: #fffbbf;
+  }
+  /* line 314, ../sass/screen.scss */
+  #wrapper #nav #autoread a:hover {
+    background: #fff667;
+  }
+  /* line 320, ../sass/screen.scss */
+  #wrapper #main {
+    max-width: 550px;
+    padding: 0 40px;
+    margin: 25px 0 25px;
+  }
+}
