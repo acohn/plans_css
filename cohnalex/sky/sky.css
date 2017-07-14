@@ -1,0 +1,149 @@
+/* "Sky" by Mark Root-Wiley */
+/* Three cheers to [youngian] for making Postmodern happen. */
+/* Feel free to make modifications, but please attribute me for the sheet */
+
+/******************************/
+/* Swatches:                  */
+/* #8CC63F = Bright Green     */
+/* #F26522 = Bright Orange    */
+/* #98D5F5 = Bright Blue (bg) */
+/* #007070 = Darker Blue      */
+/* #0071BC = Lighter Blue     */
+/* #EC008C = Pinkish Purple   */
+/******************************/
+
+@import url('https://www.grinnellplans.com/styles/starter_defaults.css');
+
+body { background: #98D5F5 url(skytree.gif) no-repeat bottom left; }
+
+/* Some Random Stuff to Take Care of */
+ul { list-style: none; }
+
+#logo {display: none; }
+
+hr { background: url(skyhr.png); border: 0; margin: 0 auto;  width: 400px; height: 36px; }
+
+a:hover { text-decoration: none; }
+
+
+
+/* Finger Form */
+#finger { position: absolute; top: 45px; left: 20px; width: 195px; height: 167px; background: url(planscloud.png) no-repeat; padding: 50px 0 0 15px; }
+#finger input { width: 125px; background: #DFF1FD; border: 1px solid #8CC63F; border-right: 0; }
+#finger button { width: 40px; background: #fff; border: 1px solid #8CC63F; color: #F26522; }
+
+
+
+/* Autoread List */
+#autoread { float: right; width: 225px; margin:15px; background: #98D5F5 url(autoreadcloud.png) no-repeat; padding-top: 90px; font-family: Arial Rounded MT Bold, Arial, Verdana, Sans; }
+
+#autoread ul { margin: 0; margin-left: 30px; padding: 0 0 0 15px; position: relative; z-index: 10; background: #98D5F5; overflow: auto; }
+#autoread ul ul { margin-left: 15px; }
+#autoread li { float: left; clear: both; }
+
+.autoreadentry { font-weight: bold; padding: 4px 0; }
+.autoreadentry.even a,.autoreadentry.even { color: #007070; background: none; }
+.autoreadentry.odd a,.autoreadentry.odd { color: #0071BC; background: none; }
+.autoreadentry.odd {margin-left: 35px;}
+.autoreadentry.even:before,.autoreadentry.odd:before { content: "["; }
+.autoreadentry.even:after,.autoreadentry.odd:after { content: "]"}
+
+.autoreadlevel a { color: #fff; font-weight: bold; }
+
+#autoread a:hover { text-decoration: none; }
+
+#autoread h2 { display: none; }
+
+
+
+/* Links List*/
+#links { float: left; font-family: Arial Rounded MT Bold, Arial, Verdana, Sans; margin: 10px; font-weight: bold; font-size: .9em; }
+
+#links ul, #links { padding: 0; margin: 0;}
+#links li { float: left; margin-right: 15px; }
+
+#links a { color: #9D7A58; text-decoration: none; }
+#links a:hover { text-decoration: underline; }
+
+#links h2 { display: none; }
+
+
+
+/* style the header / plan info */
+#header { position: absolute; top: -144px; left: 27%; width: 361px; height: 144px; background: url(infocloud.png) no-repeat; font-family: Arial Rounded MT Bold, Arial, Verdana, Sans; overflow: hidden; line-height: 1em; }
+
+#header ul { margin: 30px 15px; padding: 0; overflow: hide; }
+
+li.username { color: #F26522; margin-left: 35px;}
+li.planname { color: #F26522; font-style: italic; }
+li.planname span.title { display: none; }
+li.lastupdated { font-size: .8em; color: #8CC63F; margin: 0 0 0 38px; }
+li.lastlogin { font-size: .8em; color: #8CC63F; margin: 0 0 0 30px; }
+span.short { display: inline; }
+span.long { display: none; }
+
+
+
+/* Style the body */
+#main { position: relative; top: 177px; margin: 0 20px; font-family: Georgia, Times New Roman, Times, Serif; line-height: 1.3em; clear: left; }
+
+#main a { color: #F26522; font-weight: bold; }
+#main a:hover { text-decoration: none; }
+#main a.planlove { background: #8CC63F; color: #fff; font-weight: bold; }
+#main a:hover.planlove { background: none; color: #F26522; }
+#main p.sub { clear: left; }
+
+
+
+/* Footer stuff (although autoreadadd isn't actually in the footer) */
+#footer { clear: both; margin: 215px 0 0 150px; }
+
+#autoreadadd { width: 285px; height: 89px; margin: 0 0 0 55%; background: url(autoreadaddcloud.png) no-repeat; padding: 55px 0 0 55px; }
+
+#autoreadadd button { margin-left: 10px; background: #fff; border: 1px solid #8CC63F; color: #F26522; }
+
+#justupdated { margin: 20px; width: 568px; height: 51px; background: url(skyairplane.png) no-repeat; float: left; font-weight: bold; }
+#justupdated div { margin: 15px 0 0 45px; color: #EC008C; text-transform: uppercase; }
+a#justupdatedlink { background: #F26522; color: #fff; font-weight: bold; }
+a:hover#justupdatedlink { background: none; color: #F26522; }
+#justupdatedlink:before {content: "[";}
+#justupdatedlink:after { content: "]";}
+
+#legal {clear: both; font-size: .8em; }
+
+
+
+/* Quick Love */
+#search_results a+span { font-weight: bold; }
+#search_results a+span:before { content: "("; }
+#search_results a+span:after { content: ")"; }
+.result_user_group { margin-top: 15px; }
+
+
+
+/* Notes */
+.notes_content tr.odd { background: #BAE4F9; }
+.notes_content tr.heading { background: #DFF1FD; font-weight: bold; }
+.notes_content a.notes_nav_page,.notes_content a#notes_new_thread { background: #fff; border: 1px solid #8CC63F; color: #F26522; padding: 5px; }
+.notes_content a:hover.notes_nav_page,.notes_content a:hover#notes_new_thread { background: #DFF1FD; }
+.notes_content a#notes_new_thread { margin-bottom: 5px; }
+.notes_content table { clear: left; }
+
+ul#notes_thread li.odd {background: #BAE4F9; }
+ul#notes_thread li {padding: 5px 10px; }
+
+.notes_post_content { clear: none; }
+
+#planspage_board_messages #main {top: 120px; }
+
+.notes_post_header { font-weight: bold; }
+
+
+
+/* Headers */
+
+h1,h2,h3,h4,h5,h6 { font-family: Arial Rounded MT Bold, Arial Rounded, Arial, Verdana, Sans; text-transform: uppercase; font-weight: bold; }
+
+h1 { color: #F26522; font-size: 1.3 em; }
+h2 { color: #F26522; font-size: 1.2em; }
+h3, h4,h5,h6 { color: #EC008C; font-size: 1.1em; }
