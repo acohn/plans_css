@@ -1,0 +1,112 @@
+@import url('https://www.grinnellplans.com/styles/starter_defaults.css');
+
+#wrapper {
+	position: relative;
+	width: 1182px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	font-family: arial, sans-serif;
+	line-height: 1.5em;
+	background:url(msword.png) no-repeat top center;
+	height: 778px;
+}
+
+#logo a {
+	position: relative;
+	display: block;
+    padding: 30px 0 0 0;
+    overflow: hidden;
+    height: 0px !important;
+	height: 30px;	
+	
+}
+
+#links ul, #links li{ list-style:none; padding:0; margin:0; display:inline; }
+#links {position: absolute; display: block; float: left; width: 10%; height: 100%;}
+#links h2{
+	display: none;
+}
+
+#links ul li a{ 
+    display:block; 
+    margin:1px; 
+    font-size:1.5em; 
+    white-space:nowrap; 
+}
+#links ul{ 
+    position:absolute; 
+    top:-99999px; 
+    left:0;
+    opacity: 0; /* Hide sub level */
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    z-index:497; 
+    background: transparent; 
+}
+
+#links:hover>ul{ opacity: 1; position:relative; display:block; top: 140px; left: 31px; }
+
+
+#finger {
+	position: absolute;
+	left: 94px;
+	top: 63px;
+}
+
+
+
+#main {
+	position: absolute;
+	left: 185px;
+	top: 188px;
+	padding: 5px;
+	width: 807px;
+	height: 550px;
+	overflow: auto;
+}
+
+#main ul, #main li {
+	list-style: none;
+	padding:0; 
+	margin:0; 
+	text-indent: 0px;
+}
+
+
+	
+#autoread ul, #autoread li {list-style: none;}
+#autoread {position: absolute; display: block; float: right; right: 0px; width: 10%; height: 100%;}
+#autoread h2, .autoreadname {
+	display: none;
+}
+
+#autoread ul li a{ 
+    display:block; 
+    margin:1px; 
+    font-size:1.5em; 
+    white-space:nowrap; 
+}
+
+
+#autoread ul li.autoreadlevel.even.first.current{ 
+    position:absolute; 
+    top:-99999px; 
+    left:0;
+    opacity: 0; /* Hide sub level */
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    z-index:497; 
+    background: transparent; 
+}
+
+
+
+#autoread:hover ul li.autoreadlevel.even.first.current { opacity: 1; position:relative; display:block; top: 130px; float: right; margin-right: 25px; text-align: right; }
+
+
+#footer {
+	display: none;
+}
