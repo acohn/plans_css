@@ -1,0 +1,760 @@
+/*
+ * GDocs, Grinnell Plans Stylesheet
+ * by Mark Root-Wiley [rootwile]
+ * A follow up to MS Plans, at [busejohn]'s request
+ *
+ * [rootwile]'s unread secrets count: 15164
+ */
+
+/*
+DISLAIMER: MARK ROOT-WILEY IS NOT AT FAULT FOR ANY LOST WAGES OR JOBS DUE TO ABUSE OF COMPANY COMPUTER-USAGE POLICIES WHICH ARE INTENDED TO BE OBFUSCATED THROUGH THE USE OF THIS STYLESHEET.
+*/
+
+/*
+This stylesheet borrows from the following awesome stylesheets:
+	* HTML5 Reset: http://html5reset.org
+	* Google Docs Styles: http://docs.google.com
+	* animate.css: http://daneden.me/animate/
+	* Twenty Thirteen Demo (presently in alpha):  http://twentythirteendemo.wordpress.com
+	* My own "Interface" Plans stylesheet: http://mrwweb.com/plans/interface.css
+*/
+
+/*----------------------------------------------------------------------
+	Plan Basics
+  ----------------------------------------------------------------------*/
+@import url('https://www.grinnellplans.com/styles/starter_defaults.css');
+
+/*----------------------------------------------------------------------
+	Some Resets
+  ----------------------------------------------------------------------*/
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+
+html {overflow-y:scroll;}
+
+/* we use a lot of ULs that aren't bulleted. 
+	don't forget to restore the bullets within content. */
+ul {list-style:none;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse:collapse; border-spacing:0;}
+th {font-weight:bold; vertical-align:bottom;}
+td {font-weight:normal; vertical-align:top;}
+
+hr {display:block; height:1px; border:0; border-top:1px dotted #ccc; margin:2em 0; padding:0; width: 800px; margin-left:-90px; }
+
+input, select {vertical-align:middle;}
+
+pre {
+	white-space:pre; /* CSS2 */
+	white-space:pre-wrap; /* CSS 2.1 */
+	white-space:pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap:break-word; /* IE */
+}
+
+td, td img {vertical-align:top;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin:0;}
+
+/* make buttons play nice in IE */
+button {width:auto; overflow:visible;}
+
+textarea {
+	border: 0;
+	font-family: Arial, sans-serif;
+	font-size: 1.4rem;
+	line-height: 2.1rem;
+}
+
+
+/*----------------------------------------------------------------------
+	Layouts
+  ----------------------------------------------------------------------*/
+html {
+	font-size: 62.5%;
+	font-family: Arial, sans-serif;
+	background: #ebebeb; /* For short screens. */
+}
+
+body {
+	font-size: 1.4rem;
+	line-height: 2.2rem;
+	background: #fff;
+}
+
+#wrapper {
+	padding-top: 148px;
+	background: #ebebeb;
+	overflow: hidden;
+}
+
+#nav {
+	position: fixed;
+	top: 0;	left: 0; right: 0;
+	height: 123px;
+	z-index: 100;
+	background: #fff url(controls_strip.png) left bottom repeat-x;
+}
+#nav::before {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0; left: 0; right: 0;
+	height:63px;
+	background: url(controls.png) center top no-repeat;
+}
+
+#nav > div {
+	position: relative;
+	width: 690px;
+	margin: 0 auto;
+}
+
+#main {
+	width: 620px;
+	margin: 0 auto;
+	padding: 90px;
+	background: #fff;
+	border: 1px solid #dadada;
+}
+
+#footer {
+	width: 620px;
+	margin: 20px auto;
+	color: #777;
+	font-size: 1.1rem;
+}
+#footer a {
+	color: #777;
+}
+
+/*-----------------------------------------------------------
+	Home Link
+ -----------------------------------------------------------*/
+#logo a {
+	display: block;
+	position: fixed;
+	text-indent: -9999px;
+	height: 2rem;
+	width: 30px;
+	top: 28px;
+	margin-left: -120px;
+	background: url(home.png) left center no-repeat;
+	opacity: .1;
+	-webkit-transition: opacity 400ms ease;
+	transition:         opacity 400ms ease;
+}
+
+#logo a:hover {
+	opacity: 1;
+}
+
+/*-----------------------------------------------------------
+	Autoread & Links
+ -----------------------------------------------------------*/
+#autoread,
+#links {
+	position: fixed;
+	top: 22px;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+}
+
+#autoread {
+	margin-left: 615px;
+}
+
+#autoread ul ul {
+	margin: 7px 0 0 5px;
+}
+
+#links {
+	margin-left: 535px;
+}
+
+#autoread li,
+#links li {
+	margin-bottom: 7px;
+}
+
+#links li {
+	padding-left: 7px;
+	text-indent: -7px;
+}
+
+#autoread a,
+#links a {
+	text-decoration: none;
+}
+
+#autoread a:hover,
+#links a:hover {
+	text-decoration: underline;
+} 
+
+.autoreadname {
+	font-size: 1.2rem;
+}
+
+.autoreadname a {
+	color: #777;
+	font-weight: bold;
+}
+
+.markasread {
+	float: right;
+}
+
+.markasread:hover {
+	color:red;
+}
+
+/*-----------------------------------------------------------
+	Interactive Menu
+ -----------------------------------------------------------*/
+#autoread > ul,
+#links > ul {
+	position: absolute;
+	top:-9999px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	z-index: 200;
+}
+
+#autoread:hover > ul,
+#links:hover > ul {
+	top: -5px;
+	left: -5px;
+	right: -5px;
+	padding: 42px 5px 5px;
+	background: #fff;
+	border: 1px solid #ccc;
+}
+
+/*-----------------------------------------------------------
+	Faking the fun buttons
+ -----------------------------------------------------------*/
+#autoread h2,
+#links h2,
+.submitinput,
+#post_reply_toggle {
+	position: relative;
+	display: inline-block;
+    border-radius: 2px 2px 2px 2px;
+    font-size: 11px;
+    font-weight: bold;
+    height: 27px;
+    line-height: 27px;
+    min-width: 54px;
+    outline: 0 none;
+    padding: 0 8px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#autoread h2,
+#links h2 {
+    z-index: 201;
+}
+
+#autoread h2,
+.submitinput {
+    cursor: pointer;
+	background-color:#4d90fe;
+	background-image:-webkit-linear-gradient(top,#4d90fe,#4787ed);
+	background-image:-moz-linear-gradient(top,#4d90fe,#4787ed);
+	background-image:-ms-linear-gradient(top,#4d90fe,#4787ed);
+	background-image:-o-linear-gradient(top,#4d90fe,#4787ed);
+	background-image:linear-gradient(top,#4d90fe,#4787ed);
+	border:1px solid #3079ed;
+	color:#fff;
+}
+
+#autoread h2:hover,
+.submitinput:hover {
+	background-color:#357ae8;
+	background-image:-webkit-linear-gradient(top,#4d90fe,#357ae8);
+	background-image:-moz-linear-gradient(top,#4d90fe,#357ae8);
+	background-image:-ms-linear-gradient(top,#4d90fe,#357ae8);
+	background-image:-o-linear-gradient(top,#4d90fe,#357ae8);
+	background-image:linear-gradient(top,#4d90fe,#357ae8);
+	border:1px solid #2f5bb7;
+}
+
+#autoread h2:focus{
+	-webkit-box-shadow:inset 0 0 0 1px #fff;
+	-moz-box-shadow:inset 0 0 0 1px #fff;
+	box-shadow:inset 0 0 0 1px #fff;
+	border:1px solid #fff;
+	border:1px solid rgba(0,0,0,0);
+	outline:1px solid #4d90fe;
+	outline:0 rgba(0,0,0,0);
+}
+
+#links h2,
+#post_reply_toggle {
+	background-color:#f5f5f5;
+	background-image:-webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
+	background-image:-moz-linear-gradient(top,#f5f5f5,#f1f1f1);
+	background-image:-ms-linear-gradient(top,#f5f5f5,#f1f1f1);
+	background-image:-o-linear-gradient(top,#f5f5f5,#f1f1f1);
+	background-image:linear-gradient(top,#f5f5f5,#f1f1f1);
+	border: 1px solid #ddd;
+}
+
+#links h2:hover,
+#post_reply_toggle {
+	cursor: pointer;
+	-webkit-box-shadow:0 1px 1px rgba(0,0,0,.1);
+	-moz-box-shadow:0 1px 1px rgba(0,0,0,.1);
+	box-shadow:0 1px 1px rgba(0,0,0,.1);
+	border: 1ps solid #ccc;
+}
+
+#links h2:focus,
+#post_reply_toggle {
+	-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);
+	-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);
+	box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);
+	border: 1ps solid #ccc;
+}
+
+#block {
+	overflow: hidden;
+}
+#block button {
+	float: right;
+	background-color: #D14836;
+	background-image: -webkit-linear-gradient(top,#DD4B39,#D14836);
+	background-image: linear-gradient(top,#dd4b39,#d14836);
+	color: #FFF;
+	border: 1px solid rgba(0, 0, 0, 0);
+	border: 1px solid rgba(0, 0, 0, 0);
+}
+
+#block button:hover,
+#block button:focus {
+	background-color: #C53727;
+	background-image: -webkit-linear-gradient(top,#DD4B39,#C53727);
+	background-image: linear-gradient(top,#dd4b39,#c53727);
+	border: 1px solid #B0281A;
+}
+
+#block + .infomessage {
+	clear: both;
+	margin-top: 20px;
+}
+
+/*-----------------------------------------------------------
+	Search Field, c/o Twenty Thirteen demo
+ -----------------------------------------------------------*/
+#finger {
+	position: absolute;
+	top: 22px;
+	right: -55px;
+	z-index: 210;
+}
+
+#finger .submitinput {
+	position: absolute;
+	top: -9999px;
+}
+
+#searchname {
+	background-color: transparent;
+	background-image: url(search.png);
+	background-position: 5px center;
+	background-repeat: no-repeat;
+	background-size: 13px 17px;
+	border: none;
+	cursor: pointer;
+	height: 27px;
+	-webkit-transition: width 400ms ease, background 400ms ease;
+	transition:         width 400ms ease, background 400ms ease;
+	padding: 0 0 0 34px;
+	position: absolute;
+	width: 0;
+	right: 0;
+}
+
+#searchname:focus {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	cursor: text;
+	outline: 0;
+	width: 175px;
+}
+
+/*-----------------------------------------------------------
+	Plan Header
+ -----------------------------------------------------------*/
+#header {
+	margin-left: -126px;
+	top: 24px;
+	position: fixed;
+	z-index: 101;
+}
+
+#header ul {
+	list-style: none;
+}
+
+.username,
+.planname {
+	float: left;
+	font-size: 2rem;
+}
+
+.planname .value { /* at [swensons]'s request */
+	display: inline-block;
+	max-width: 500px;
+	margin-left: 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #999;
+	line-height: 2.4rem;
+}
+
+.lastupdated {
+	position: fixed;
+	top: 54px;
+	margin-left: 370px;
+	color: #666;
+	font-size: 1.2rem;
+}
+
+.long {
+	display: none;
+}
+.short {
+	display: inline;
+}
+
+.username .title,
+.lastlogin,
+.planname .title { display: none; }
+
+.alertmessage,
+.infomessage,
+.requestmessage {
+    color: #888888;
+    font-style: italic;
+    position: relative;
+    text-align: center;
+}
+
+.alertmessage {
+	color: red;
+}
+
+/*-----------------------------------------------------------
+	Footer
+ -----------------------------------------------------------*/
+#autoreadadd {
+	margin: 20px auto 0;
+}
+
+#autoreadadd .submitinput {
+	margin-left: 10px;
+}
+
+/* Plan Editing Form */
+#main textarea {
+	width:620px;
+	margin-bottom: 10px;
+}
+
+#wrapper #editform .submitinput {float:right;}
+
+#edit_fill_meter {width:600px;}
+
+#edit_fill_meter .fill_percent {font-weight:bold;}
+#edit_fill_meter .fill_percent:before {font-weight:normal; content:"Your Plan is ";}
+#edit_fill_meter .fill_percent:after {font-weight:normal; content:" full";}
+
+#edit_fill_meter .fill_bar {
+	height:15px;
+	width: 200px;
+	margin-right: 10px;
+	border:1px solid #CCC;
+	background-image:none;
+	background: #e2e2e2;
+	background-image:-webkit-linear-gradient(top,#e2e2e2,#d1d1d1);
+	background-image:-moz-linear-gradient(top,#e2e2e2,#d1d1d1);
+	background-image:-ms-linear-gradient(top,#e2e2e2,#d1d1d1);
+	background-image:-o-linear-gradient(top,#e2e2e2,#d1d1d1);
+	background-image:linear-gradient(top,#e2e2e2,#d1d1d1);
+} 
+#edit_fill_meter .fill_bar .full_amount {
+	height: 15px;
+	background-image:none;
+	background: #4d90fe;
+	background-image:-webkit-linear-gradient(top,#4d90fe,#4787ed);
+	background-image:-moz-linear-gradient(top,#4d90fe,#4787ed);
+	background-image:-ms-linear-gradient(top,#4d90fe,#4787ed);
+	background-image:-o-linear-gradient(top,#4d90fe,#4787ed);
+	background-image:linear-gradient(top,#4d90fe,#4787ed);
+}
+
+/*-----------------------------------------------------------
+	Links
+ -----------------------------------------------------------*/
+a {
+	color: #1155CC;
+}
+
+/*-----------------------------------------------------------
+	"Settings Pages"
+ -----------------------------------------------------------*/
+.preferences #main > div:before {
+    background: rgba(255, 255, 255, 0.8);
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+.preferences #main > div {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.333);
+    padding: 30px;
+    position: relative;
+    width: 560px;
+    z-index: 0;
+}
+
+/*-----------------------------------------------------------
+	Notes
+ -----------------------------------------------------------*/
+ #topic_title {
+ 	margin: 15px 0;
+ 	font-size: 18px;
+ 	font-size: 1.8rem;
+ }
+.notes_post {
+	padding: 10px;
+}
+.odd .notes_post {
+	background-color: #eee;
+}
+.notes_post_header {
+	color: #666;
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+.notes_post .post_author,
+.notes_post .post_date {
+	color: #000;
+	font-weight: bold;
+}
+
+/*-----------------------------------------------------------
+	Misc.
+ -----------------------------------------------------------*/
+/* Adding Brackets All Ovah the Place */
+#justupdatedlink:before,
+#search_results a.planlove:before,
+#notes_board a.planlove:before,
+.username .value:before {content: "[";}
+
+#justupdatedlink:after,
+#search_results a.planlove:after,
+#notes_board a.planlove:after,
+.username .value:after { content: "]";}
+
+#search_results {
+	clear:both;
+	margin-top: 20px;
+}
+
+#search_results li {
+	margin-bottom: 15px;
+}
+
+/*-----------------------------------------------------------
+	Some sweet stuff from Animate.css
+ -----------------------------------------------------------*/
+
+/* Everything that is animated by animate.css */
+#autoread > ul,
+#links > ul {
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-ms-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-duration: .4s;
+	-moz-animation-duration: .4s;
+	-ms-animation-duration: .4s;
+	-o-animation-duration: .4s;
+	animation-duration: .4s;
+}
+
+/* Fade In Down */
+#autoread:hover > ul,
+#links:hover > ul {
+	-webkit-animation-name: fadeInDown;
+	-moz-animation-name: fadeInDown;
+	-o-animation-name: fadeInDown;
+	animation-name: fadeInDown;
+}
+
+/* Specific Animate Keyframe Sets*/
+@-webkit-keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-10px);
+	}
+	
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+}
+@-moz-keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		-moz-transform: translateY(-10px);
+	}
+	
+	100% {
+		opacity: 1;
+		-moz-transform: translateY(0);
+	}
+}
+@-o-keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		-ms-transform: translateY(-10px);
+	}
+	
+	100% {
+		opacity: 1;
+		-ms-transform: translateY(0);
+	}
+}
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@-webkit-keyframes fadeOutUp {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(-20px);
+	}
+}
+@-moz-keyframes fadeOutUp {
+	0% {
+		opacity: 1;
+		-moz-transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-moz-transform: translateY(-20px);
+	}
+}
+@-o-keyframes fadeOutUp {
+	0% {
+		opacity: 1;
+		-o-transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-o-transform: translateY(-20px);
+	}
+}
+@keyframes fadeOutUp {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+Because...
+
+                             ,
+      ,-.       _,---._ __  / \
+     /  )    .-'       `./ /   \
+    (  (   ,'            `/    /|
+     \  `-"             \'\   / |
+      `.              ,  \ \ /  |
+       /`.          ,'-`----Y   |
+      (            ;        |   '
+      |  ,-.    ,-'         |  /
+      |  | (   |        hjw | /
+      )  |  \  `.___________|/
+      `--'   `--'
+
+
+      -http://user.xmission.com/~emailbox/ascii_cats.htm
+
+*/
